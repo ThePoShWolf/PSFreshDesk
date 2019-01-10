@@ -1,5 +1,5 @@
 # https://developers.freshdesk.com/api/#tickets
-Function Get-FreshDeskTickets {
+Function Get-FreshDeskTicket {
     [cmdletbinding()]
     Param(
         [Parameter(
