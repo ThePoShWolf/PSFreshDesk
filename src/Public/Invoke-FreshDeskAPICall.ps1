@@ -10,12 +10,11 @@ Apparently my office neighbors are noisy today, sorry about that.
 #>
 Function Invoke-FreshDeskAPICall {
     Param(
-        [string]$uri,
         [ValidateSet('Get','Post')]
         [string]$method,
         [string]$resource,
         [string]$Domain = 'howellit',
-        [string]$apikey
+        [string]$apikey = (get-content C:\tmp\fdapikey.txt)
     )
     $baseuri = "https://$Domain.freshdesk.com/api/v2"
 
