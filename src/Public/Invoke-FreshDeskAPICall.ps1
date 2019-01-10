@@ -13,7 +13,7 @@ Function Invoke-FreshDeskAPICall {
         [ValidateSet('Get','Post')]
         [string]$method,
         [string]$resource,
-        [string]$Domain = 'howellit',
+        [string]$Domain = (get-content C:\tmp\fddomain.txt),
         [string]$apikey = (get-content C:\tmp\fdapikey.txt)
     )
     $baseuri = "https://$Domain.freshdesk.com/api/v2"
